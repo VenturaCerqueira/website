@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFT Camarão - Sistema de Gestão de Carcinicultura</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/FAZENDA DE CAMARÕES.png" alt="BFT Camarão Logo" class="logo-img">
+                    <h1>BFT Camarão</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#sobre"><i class="fas fa-info-circle"></i>Sobre</a>
+                    <a href="#projeto"><i class="fas fa-project-diagram"></i>O Projeto</a>
+                    <a href="#equipe"><i class="fas fa-users"></i>Equipe</a>
+                    <a href="#funcionalidades"><i class="fas fa-cogs"></i>Funcionalidades</a>
+                    <a href="#tecnologias"><i class="fas fa-code"></i>Tecnologias</a>
+                    <a href="#demonstracao"><i class="fas fa-images"></i>Demonstração</a>
+                    <a href="#contato"><i class="fas fa-envelope"></i>Contato</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>BFT - Camarões</h2>
+                    <h3 style="color: #ea580c;">Biofloc technology</h3>
+                    <p>Venha conhecer o projeto da nossa equipe! Estamos animados para compartilhar nossas ideias e mostrar o que estamos construindo.</p>
+                    <div class="hero-buttons">
+                        <a href="#projeto" class="btn btn-primary"><i class="fas fa-project-diagram"></i> Conheça o Projeto</a>
+                        <a href="#equipe" class="btn btn-secondary"><i class="fas fa-users"></i> Nossa Equipe</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/foto-inicial.jpeg" alt="Sistema Completo de Gestão para Carcinicultura" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#c2410c;stop-opacity:1" />
+                </linearGradient>
+                <filter id="waveShadow">
+                    <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#ea580c" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <path d="M0,60 C150,20 350,120 600,60 C850,0 1050,100 1200,60 L1200,0 L0,0 Z" fill="url(#waveGradient)" filter="url(#waveShadow)"></path>
+        </svg>
+    </div>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Sobre o Projeto</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>O <strong>BFT Camarão</strong> é um sistema completo de gestão para fazendas de carcinicultura, desenvolvido para otimizar a produção de camarão através do monitoramento contínuo da qualidade da água, controle alimentar e análise de dados operacionais.</p>
+                    <p>Com interface intuitiva e tecnologia IoT integrada, permite aos produtores tomar decisões informadas e aumentar a eficiência operacional.</p>
+                </div>
+                <div class="sobre-stats">
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Redução de Perdas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="stat-number">30%</div>
+                        <div class="stat-label">Aumento de Produtividade</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Monitoramento Contínuo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                </linearGradient>
+                <filter id="waveShadow1">
+                    <feDropShadow dx="0" dy="-4" stdDeviation="4" flood-color="#fbbf24" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z" fill="url(#waveGradient1)" filter="url(#waveShadow1)"></path>
+        </svg>
+    </div>
+
+    <!-- Projeto Section -->
+    <section id="projeto" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> O Projeto BFT Camarão</h2>
+            <div class="projeto-content">
+                <div class="projeto-main">
+                    <h3>Visão Geral</h3>
+                    <p>O BFT Camarão surge da necessidade de modernizar a carcinicultura brasileira através da integração de tecnologias digitais. Nosso sistema combina hardware IoT com software avançado para criar uma solução completa de gestão de fazendas de camarão.</p>
+
+                    <h3>Problema Identificado</h3>
+                    <p>A carcinicultura tradicional enfrenta diversos desafios: monitoramento manual da qualidade da água, dificuldade em controlar parâmetros biológicos, gestão ineficiente de custos operacionais e falta de dados em tempo real para tomada de decisões.</p>
+
+                    <h3>Nossa Solução</h3>
+                    <p>Desenvolvemos uma plataforma integrada que:</p>
+                    <ul class="projeto-list">
+                        <li><strong>Monitora automaticamente</strong> parâmetros críticos da água (pH, temperatura, oxigenação, etc.)</li>
+                        <li><strong>Controla remotamente</strong> equipamentos como aeradores e bombas</li>
+                        <li><strong>Analisa dados biológicos</strong> dos camarões em tempo real</li>
+                        <li><strong>Otimiza custos</strong> através de relatórios financeiros detalhados</li>
+                        <li><strong>Previne perdas</strong> com alertas automáticos e preditivos</li>
+                    </ul>
+
+                    <h3>Impacto Esperado</h3>
+                    <p>Com o BFT Camarão, esperamos:</p>
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <div class="impact-number">40%</div>
+                            <div class="impact-text">Redução nos custos operacionais</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">25%</div>
+                            <div class="impact-text">Aumento na produtividade</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">90%</div>
+                            <div class="impact-text">Redução de perdas por mortalidade</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">50%</div>
+                            <div class="impact-text">Melhoria na qualidade do produto final</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projeto-sidebar">
+                    <div class="projeto-card">
+                        <h4>Fases do Desenvolvimento</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5>Pesquisa & Planejamento</h5>
+                                    <p>Estudo do mercado e necessidades dos produtores</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5>Desenvolvimento MVP</h5>
+                                    <p>Criação do protótipo funcional</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5>Testes em Campo</h5>
+                                    <p>Validação com produtores reais</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5>Lançamento</h5>
+                                    <p>Disponibilização comercial</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                </linearGradient>
+                <filter id="waveShadow2">
+                    <feDropShadow dx="0" dy="-4" stdDeviation="4" flood-color="#fbbf24" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <path d="M0,60 C150,20 350,120 600,60 C850,0 1050,100 1200,60 L1200,0 L0,0 Z" fill="url(#waveGradient2)" filter="url(#waveShadow2)"></path>
+        </svg>
+    </div>
+
+    <!-- Equipe Section -->
+    <section id="equipe" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-users"></i> Nossa Equipe</h2>
+            <p class="section-subtitle">Conheça os profissionais por trás do BFT Camarão</p>
+            <div class="equipe-grid">
+                <div class="equipe-member">
+                    <div class="member-photo">
+                        <img src="images/placeholder-avatar.png" alt="Foto do Integrante" class="member-img">
+                        <div class="member-overlay">
+                            <div class="member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Nome Completo do Integrante</h3>
+                        <p class="member-role">Cargo/Função</p>
+                        <p class="member-bio">Breve descrição sobre o integrante, experiência profissional e contribuição para o projeto.</p>
+                    </div>
+                </div>
+
+                <div class="equipe-member">
+                    <div class="member-photo">
+                        <img src="images/placeholder-avatar.png" alt="Foto do Integrante" class="member-img">
+                        <div class="member-overlay">
+                            <div class="member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Nome Completo do Integrante</h3>
+                        <p class="member-role">Cargo/Função</p>
+                        <p class="member-bio">Breve descrição sobre o integrante, experiência profissional e contribuição para o projeto.</p>
+                    </div>
+                </div>
+
+                <div class="equipe-member">
+                    <div class="member-photo">
+                        <img src="images/placeholder-avatar.png" alt="Foto do Integrante" class="member-img">
+                        <div class="member-overlay">
+                            <div class="member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Nome Completo do Integrante</h3>
+                        <p class="member-role">Cargo/Função</p>
+                        <p class="member-bio">Breve descrição sobre o integrante, experiência profissional e contribuição para o projeto.</p>
+                    </div>
+                </div>
+
+                <div class="equipe-member">
+                    <div class="member-photo">
+                        <img src="images/placeholder-avatar.png" alt="Foto do Integrante" class="member-img">
+                        <div class="member-overlay">
+                            <div class="member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Nome Completo do Integrante</h3>
+                        <p class="member-role">Cargo/Função</p>
+                        <p class="member-bio">Breve descrição sobre o integrante, experiência profissional e contribuição para o projeto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                </linearGradient>
+                <filter id="waveShadow3">
+                    <feDropShadow dx="0" dy="-4" stdDeviation="4" flood-color="#fbbf24" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z" fill="url(#waveGradient3)" filter="url(#waveShadow3)"></path>
+        </svg>
+    </div>
+
+    <!-- Funcionalidades Section -->
+    <section id="funcionalidades" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-cogs"></i> Funcionalidades Principais</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Monitoramento da Qualidade da Água</h3>
+                    <p>Acompanhe em tempo real parâmetros como pH, temperatura, oxigenação, nitrito, amônia e outros indicadores críticos para a saúde dos camarões.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Análise de Dados</h3>
+                    <p>Visualize tendências através de gráficos interativos e relatórios detalhados para tomada de decisões estratégicas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Controle Alimentar</h3>
+                    <p>Gerencie o programa de alimentação, controle de estoques e registre dados de crescimento dos camarões.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Gestão Financeira</h3>
+                    <p>Acompanhe custos operacionais, despesas e gere relatórios econômicos para otimizar a rentabilidade.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Controle de Equipamentos</h3>
+                    <p>Monitore o status de aeradores, bombas e outros equipamentos com alertas automáticos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Gestão de Usuários</h3>
+                    <p>Sistema de autenticação seguro com diferentes níveis de acesso para equipe e administradores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                </linearGradient>
+                <filter id="waveShadow4">
+                    <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#fbbf24" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <path d="M0,60 C150,20 350,120 600,60 C850,0 1050,100 1200,60 L1200,0 L0,0 Z" fill="url(#waveGradient4)" filter="url(#waveShadow4)"></path>
+        </svg>
+    </div>
+
+    <!-- Tecnologias Section -->
+    <section id="tecnologias" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-code"></i> Tecnologias Utilizadas</h2>
+            <div class="tech-stack">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Vite</span>
+                        <span class="tech-item">Tailwind CSS</span>
+                        <span class="tech-item">Recharts</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">Express.js</span>
+                        <span class="tech-item">MongoDB</span>
+                        <span class="tech-item">JWT</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>IoT & Analytics</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Sensores IoT</span>
+                        <span class="tech-item">API REST</span>
+                        <span class="tech-item">WebSocket</span>
+                        <span class="tech-item">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                </linearGradient>
+                <filter id="waveShadow5">
+                    <feDropShadow dx="0" dy="-4" stdDeviation="4" flood-color="#fbbf24" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z" fill="url(#waveGradient5)" filter="url(#waveShadow5)"></path>
+        </svg>
+    </div>
+
+    <!-- Demonstração Section -->
+    <section id="demonstracao" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-images"></i> Capturas de Tela</h2>
+            <div class="screenshots">
+                <div class="screenshot">
+                    <img src="images/IMG_1371.PNG" alt="Dashboard Principal" class="screenshot-img">
+                    <h4>Dashboard Principal</h4>
+                    <p>Visão geral completa com métricas em tempo real e gráficos interativos.</p>
+                </div>
+                <div class="screenshot">
+                    <img src="images/IMG_1372.PNG" alt="Controle de Qualidade da Água" class="screenshot-img">
+                    <h4>Controle de Qualidade da Água</h4>
+                    <p>Interface para monitoramento e registro de parâmetros da água.</p>
+                </div>
+                <div class="screenshot">
+                    <img src="images/IMG_1373.PNG" alt="Gestão de Tanques" class="screenshot-img">
+                    <h4>Gestão de Tanques</h4>
+                    <p>Controle completo dos tanques de cultivo e equipamentos associados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveGradient6" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#c2410c;stop-opacity:1" />
+                </linearGradient>
+                <filter id="waveShadow6">
+                    <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#ea580c" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <path d="M0,60 C150,20 350,120 600,60 C850,0 1050,100 1200,60 L1200,0 L0,0 Z" fill="url(#waveGradient6)" filter="url(#waveShadow6)"></path>
+        </svg>
+    </div>
+
+    <!-- Contato Section -->
+    <section id="contato" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contato@bftcamarao.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>+55 (11) 9999-9999</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>São Paulo, Brasil</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Assunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveGradient7" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#c2410c;stop-opacity:1" />
+                </linearGradient>
+                <filter id="waveShadow7">
+                    <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#ea580c" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <path d="M0,60 C150,100 350,0 600,60 C850,120 1050,20 1200,60 L1200,120 L0,120 Z" fill="url(#waveGradient7)" filter="url(#waveShadow7)"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/FAZENDA DE CAMARÕES.png" alt="BFT Camarão Logo" class="footer-logo-img">
+                    <p>Sistema de Gestão para Carcinicultura</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#projeto">O Projeto</a>
+                    <a href="#equipe">Equipe</a>
+                    <a href="#funcionalidades">Funcionalidades</a>
+                    <a href="#tecnologias">Tecnologias</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BFT Camarão. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
