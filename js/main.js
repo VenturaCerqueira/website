@@ -188,8 +188,134 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Add some interactive elements
+// Gallery functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Gallery modal elements
+    const modal = document.getElementById('gallery-modal');
+    const modalImg = document.getElementById('modal-image');
+    const modalLikeBtn = document.getElementById('modal-like-btn');
+    const closeBtn = document.getElementById('close-modal');
+    const modalOverlay = document.getElementById('modal-overlay');
+
+    // Load likes from localStorage
+    let likedImages = JSON.parse(localStorage.getItem('likedImages')) || {};
+
+    // Update like button state
+    function updateLikeButton(button, imageSrc, isLiked) {
+        const icon = button.querySelector('i');
+        if (isLiked) {
+            button.classList.add('liked');
+            icon.classList.remove('far');
+            icon.classList.add('fas');
+        } else {
+            button.classList.remove('liked');
+            icon.classList.remove('fas');
+            icon.classList.add('far');
+        }
+    }
+
+    // Toggle like for an image
+    function toggleLike(imageSrc) {
+        likedImages[imageSrc] = !likedImages[imageSrc];
+        localStorage.setItem('likedImages', JSON.stringify(likedImages));
+        return likedImages[imageSrc];
+    }
+
+    // Image loading effect
+    function handleImageLoad(img) {
+        const item = img.closest('.galeria-item');
+        item.classList.add('loaded');
+        item.classList.remove('loading');
+    }
+
+    // Initialize gallery items
+    document.querySelectorAll('.galeria-item').forEach((item, index) => {
+        const img = item.querySelector('img');
+        const likeBtn = item.querySelector('.like-btn');
+        const imageSrc = img.src;
+
+        // Add loading class initially
+        item.classList.add('loading');
+
+        // Handle image load
+        if (img.complete) {
+            handleImageLoad(img);
+        } else {
+            img.addEventListener('load', () => handleImageLoad(img));
+        }
+
+        // Set initial like state
+        updateLikeButton(likeBtn, imageSrc, likedImages[imageSrc] || false);
+
+        // Like button click handler
+        likeBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent modal opening
+            const isLiked = toggleLike(imageSrc);
+            updateLikeButton(this, imageSrc, isLiked);
+        });
+
+        // Gallery item click handler (open modal)
+        item.addEventListener('click', function() {
+            const fullSrc = this.getAttribute('data-src') || img.src;
+            modalImg.src = fullSrc;
+            modal.style.display = 'flex';
+
+            // Update modal like button
+            const modalIsLiked = likedImages[fullSrc] || false;
+            updateLikeButton(modalLikeBtn, fullSrc, modalIsLiked);
+
+            // Update modal like button data
+            modalLikeBtn.setAttribute('data-src', fullSrc);
+
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Modal like button click handler
+    modalLikeBtn.addEventListener('click', function() {
+        const imageSrc = this.getAttribute('data-src');
+        const isLiked = toggleLike(imageSrc);
+        updateLikeButton(this, imageSrc, isLiked);
+
+        // Also update the corresponding gallery item like button
+        const galleryItem = document.querySelector(`.galeria-item[data-src="${imageSrc}"] .like-btn`) ||
+                           document.querySelector(`.galeria-item img[src="${imageSrc}"]`).closest('.galeria-item').querySelector('.like-btn');
+        if (galleryItem) {
+            updateLikeButton(galleryItem, imageSrc, isLiked);
+        }
+    });
+
+    // Close modal handlers
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+
+    // Intersection Observer for gallery entrance animations
+    const galleryObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Observe gallery items
+    document.querySelectorAll('.galeria-item').forEach(item => {
+        galleryObserver.observe(item);
+    });
+
     // Add cursor trail effect (optional)
     const cursor = document.createElement('div');
     cursor.className = 'cursor-trail';

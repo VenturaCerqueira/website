@@ -1,6 +1,9 @@
-- [x] Make hero image responsive (change fixed width/height to max-width 100%, height auto)
-- [x] Adjust hero content padding for mobile (reduce padding in hero-content)
-- [x] Add hamburger menu for navigation on mobile (HTML, CSS, JS)
-- [x] Adjust section paddings and font sizes for better mobile experience
-- [x] Ensure all grids and flex layouts stack properly on tablets and mobile
-- [x] Test responsiveness with browser dev tools
+# TODO: Alterar Galeria para Layout em Grade como Instagram
+
+## Tasks
+- [ ] Update index.html: Change galeria section from carousel to grid layout
+- [ ] Update css/style.css: Modify .galeria-container and related styles for grid instead of carousel
+- [ ] Remove carousel-specific animations and add grid-specific styles
+- [ ] Ensure modal and like functionality still works with grid
+- [ ] Test responsiveness of the grid layout
+- [ ] Optimize for mobile devices
