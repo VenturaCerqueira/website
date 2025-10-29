@@ -100,6 +100,38 @@ body {
     font-size: 1.1rem;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #92400e;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.header.scrolled .hamburger span {
+    background: white;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
@@ -148,8 +180,8 @@ body {
 }
 
 .hero-img {
-    width: 500px;
-    height: 500px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     object-position: 50% 0%;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -793,18 +825,38 @@ body {
     }
 
     .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        flex-direction: column;
         gap: 1rem;
+        padding: 1rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        border-radius: 0 0 12px 12px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .hero {
-        flex-direction: column;
-        text-align: center;
         padding: 100px 0 60px;
     }
 
     .hero-content {
-        padding-right: 0;
-        margin-bottom: 2rem;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 2rem;
+        text-align: center;
     }
 
     .hero-content h2 {
@@ -813,6 +865,13 @@ body {
 
     .hero-buttons {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
     }
 
     .sobre-content,
@@ -822,11 +881,20 @@ body {
         gap: 2rem;
     }
 
+    .sobre-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
     .features-grid,
     .screenshots,
     .tech-stack,
     .equipe-grid {
         grid-template-columns: 1fr;
+    }
+
+    .equipe-member {
+        max-width: 100%;
     }
 
     .footer-content {
@@ -842,27 +910,100 @@ body {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
+        margin-bottom: 2rem;
     }
 
     .hero-content h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .sobre-text p {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     .stat {
-        padding: 1.5rem;
+        padding: 1.2rem;
+        height: auto;
+        min-height: 180px;
     }
 
     .stat-number {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    .projeto-main h3 {
+        font-size: 1.3rem;
+    }
+
+    .projeto-main p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .member-name {
+        font-size: 1.1rem;
+    }
+
+    .member-role {
+        font-size: 0.95rem;
+    }
+
+    .member-bio {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .contact-item h4 {
+        font-size: 1rem;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
     }
 }
 

@@ -101,11 +101,24 @@ document.querySelectorAll('.screenshot').forEach(screenshot => {
     });
 });
 
-// Mobile menu toggle (if needed in future)
-function toggleMobileMenu() {
-    const nav = document.querySelector('.nav');
-    nav.classList.toggle('nav-open');
+// Mobile menu toggle
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav');
+
+if (hamburger && nav) {
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
 }
+
+// Close mobile menu when clicking on a nav link
+document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+    });
+});
 
 // Stats counter animation
 function animateStats() {

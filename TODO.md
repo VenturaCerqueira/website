@@ -1,0 +1,6 @@
+- [x] Make hero image responsive (change fixed width/height to max-width 100%, height auto)
+- [x] Adjust hero content padding for mobile (reduce padding in hero-content)
+- [x] Add hamburger menu for navigation on mobile (HTML, CSS, JS)
+- [x] Adjust section paddings and font sizes for better mobile experience
+- [x] Ensure all grids and flex layouts stack properly on tablets and mobile
+- [x] Test responsiveness with browser dev tools
