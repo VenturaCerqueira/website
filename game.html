@@ -65,6 +65,30 @@
         </div>
     </section>
 
+    <!-- Game Result Modal -->
+    <div id="game-modal" class="game-modal">
+        <div class="game-modal-content">
+            <div class="game-modal-header">
+                <h2 id="modal-title"></h2>
+                <span class="game-modal-close">&times;</span>
+            </div>
+            <div class="game-modal-body">
+                <div class="game-modal-icon">
+                    <i id="modal-icon"></i>
+                </div>
+                <p id="modal-message"></p>
+            </div>
+            <div class="game-modal-footer">
+                <button class="btn btn-primary" id="modal-restart-btn">
+                    <i class="fas fa-redo"></i> Jogar Novamente
+                </button>
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Voltar ao Início
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -89,6 +113,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/game.js"></script>
 </body>
