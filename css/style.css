@@ -1710,37 +1710,39 @@ html {
 
 /* Mobile Responsiveness for Floating Buttons */
 @media (max-width: 768px) {
-    .floating-message-btn,
+    .floating-message-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 0;
+        font-size: 0;
+        gap: 0;
+        right: 20px;
+        bottom: 120px;
+    }
+
     .floating-game-btn {
         width: 60px;
         height: 60px;
         font-size: 1.3rem;
         right: 20px;
-    }
-
-    .floating-message-btn {
-        bottom: 120px;
-    }
-
-    .floating-game-btn {
         bottom: 40px;
     }
 }
 
 @media (max-width: 480px) {
-    .floating-message-btn,
+    .floating-message-btn {
+        width: 55px;
+        height: 55px;
+        right: 15px;
+        bottom: 105px;
+    }
+
     .floating-game-btn {
         width: 55px;
         height: 55px;
         font-size: 1.2rem;
         right: 15px;
-    }
-
-    .floating-message-btn {
-        bottom: 105px;
-    }
-
-    .floating-game-btn {
         bottom: 35px;
     }
 }
