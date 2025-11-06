@@ -536,6 +536,40 @@
         </div>
     </div>
 
+    <!-- Modal for Message -->
+    <div id="message-modal" class="modal">
+        <div class="modal-overlay" id="message-modal-overlay"></div>
+        <div class="modal-content message-modal-content">
+            <span class="close-btn" id="close-message-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-envelope-open-text modal-icon"></i>
+                <h3>Deixe um Recado</h3>
+            </div>
+            <form action="https://formspree.io/f/xldoqagy" method="POST" id="message-form">
+                <div class="form-group">
+                    <i class="fas fa-user form-icon"></i>
+                    <input type="text" name="name" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-envelope form-icon"></i>
+                    <input type="email" name="email" placeholder="Seu Email" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-comment-dots form-icon"></i>
+                    <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit-btn">
+                    <span class="btn-text">Enviar Recado</span>
+                    <div class="loading-spinner" id="loading-spinner"></div>
+                </button>
+            </form>
+            <div class="success-message" id="success-message">
+                <i class="fas fa-check-circle success-icon"></i>
+                <p>Obrigado pelo seu recado! Entraremos em contato em breve.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Funcionalidades Section -->
     <section id="funcionalidades" class="section section-gray">
         <div class="container">
@@ -718,6 +752,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Message Button -->
+    <a href="#" class="floating-message-btn" title="Deixe um Recado" id="message-btn">
+        <i class="fas fa-envelope"></i> Deixe um Recado
+    </a>
 
     <!-- Floating Game Button -->
     <a href="game.html" class="floating-game-btn" title="Jogar Ache o Camarão">

@@ -1647,6 +1647,37 @@ html {
     background: #fdba74;
 }
 
+/* Floating Message Button */
+.floating-message-btn {
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(234, 88, 12, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border: 3px solid white;
+    padding: 12px 20px;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.floating-message-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(234, 88, 12, 0.5);
+}
+
+.floating-message-btn i {
+    font-size: 1.2rem;
+}
+
 /* Floating Game Button */
 .floating-game-btn {
     position: fixed;
@@ -1677,6 +1708,43 @@ html {
     animation: bounce 2s infinite;
 }
 
+/* Mobile Responsiveness for Floating Buttons */
+@media (max-width: 768px) {
+    .floating-message-btn,
+    .floating-game-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+        right: 20px;
+    }
+
+    .floating-message-btn {
+        bottom: 120px;
+    }
+
+    .floating-game-btn {
+        bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-message-btn,
+    .floating-game-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 1.2rem;
+        right: 15px;
+    }
+
+    .floating-message-btn {
+        bottom: 105px;
+    }
+
+    .floating-game-btn {
+        bottom: 35px;
+    }
+}
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -1688,3 +1756,200 @@ html {
         transform: translateY(-3px);
     }
 }
+
+/* Message Modal Styles */
+.message-modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s ease;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-icon {
+    font-size: 1.8rem;
+    color: #ea580c;
+    animation: bounceIn 0.6s ease;
+}
+
+.message-modal-content h3 {
+    text-align: center;
+    color: #92400e;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.message-modal-content .form-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.form-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ea580c;
+    font-size: 1rem;
+    z-index: 1;
+}
+
+.message-modal-content .form-group input,
+.message-modal-content .form-group textarea {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 2px solid #fed7aa;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    background: #fefefe;
+}
+
+.message-modal-content .form-group textarea {
+    padding-top: 12px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.message-modal-content .form-group input:focus,
+.message-modal-content .form-group textarea:focus {
+    outline: none;
+    border-color: #ea580c;
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
+    background: white;
+}
+
+.message-modal-content .btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.message-modal-content .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3);
+}
+
+.btn-text {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.loading .btn-text {
+    opacity: 0;
+}
+
+.loading .loading-spinner {
+    opacity: 1;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 1rem;
+    background: #d1fae5;
+    border: 1px solid #10b981;
+    border-radius: 8px;
+    margin-top: 1rem;
+    animation: slideIn 0.5s ease;
+}
+
+.success-icon {
+    font-size: 2rem;
+    color: #10b981;
+    margin-bottom: 0.5rem;
+    animation: checkmark 0.6s ease;
+}
+
+.success-message p {
+    color: #065f46;
+    margin: 0;
+    font-weight: 500;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes checkmark {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+

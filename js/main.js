@@ -327,6 +327,59 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Message modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const messageBtn = document.getElementById('message-btn');
+    const messageModal = document.getElementById('message-modal');
+    const messageModalOverlay = document.getElementById('message-modal-overlay');
+    const closeMessageModal = document.getElementById('close-message-modal');
+    const messageForm = document.getElementById('message-form');
+
+    // Open modal
+    if (messageBtn && messageModal) {
+        messageBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            messageModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Close modal functions
+    function closeModal() {
+        messageModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close on close button
+    if (closeMessageModal) {
+        closeMessageModal.addEventListener('click', closeModal);
+    }
+
+    // Close on overlay click
+    if (messageModalOverlay) {
+        messageModalOverlay.addEventListener('click', closeModal);
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && messageModal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+
+    // Handle form submission
+    if (messageForm) {
+        messageForm.addEventListener('submit', function(e) {
+            // Let Formspree handle the submission, but show a message
+            setTimeout(() => {
+                alert('Obrigado pelo seu recado! Entraremos em contato em breve.');
+                closeModal();
+                messageForm.reset();
+            }, 1000); // Small delay to allow form submission
+        });
+    }
+});
+
 // CSS for cursor trail
 const style = document.createElement('style');
 style.textContent = `
