@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby de Jogos - BFT Camarão</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lobby.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/FAZENDA DE CAMARÕES.png" alt="BFT Camarão Logo" class="logo-img">
+                    <h1><a href="index.html" style="color: inherit; text-decoration: none;">BFT Camarão</a></h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html"><i class="fas fa-home"></i>Início</a>
+                    <a href="index.html#sobre"><i class="fas fa-info-circle"></i>Sobre</a>
+                    <a href="index.html#projeto"><i class="fas fa-project-diagram"></i>O Projeto</a>
+                    <a href="index.html#equipe"><i class="fas fa-users"></i>Equipe</a>
+                </nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Lobby Section -->
+    <section class="lobby-section">
+        <div class="container">
+            <div class="lobby-container">
+                <h1 class="lobby-title"><i class="fas fa-gamepad"></i> Lobby de Jogos</h1>
+                <p class="lobby-description">Divirta-se com jogos temáticos sobre carcinicultura! Escolha um jogo abaixo para começar.</p>
+
+                <div class="games-grid" id="games-grid">
+                    <!-- Game Card 1: Ache o Camarão -->
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="images/FAZENDA DE CAMARÕES.png" alt="Ache o Camarão">
+                            <div class="game-overlay">
+                                <i class="fas fa-play-circle game-play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Ache o Camarão</h3>
+                            <p class="game-description">Você tem 3 chances para encontrar o camarão escondido nas cartas. Boa sorte!</p>
+                            <a href="game.html" class="btn btn-primary game-btn">
+                                <i class="fas fa-play"></i> Jogar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder for future games -->
+                    <div class="game-card coming-soon">
+                        <div class="game-image">
+                            <div class="coming-soon-placeholder">
+                                <i class="fas fa-plus-circle"></i>
+                                <p>Em Breve</p>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Novo Jogo</h3>
+                            <p class="game-description">Mais jogos temáticos sobre carcinicultura em breve!</p>
+                            <button class="btn btn-secondary game-btn" disabled>
+                                <i class="fas fa-clock"></i> Em Desenvolvimento
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/FAZENDA DE CAMARÕES.png" alt="BFT Camarão Logo" class="footer-logo-img">
+                    <p>Sistema de Gestão para Carcinicultura</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#sobre">Sobre</a>
+                    <a href="index.html#projeto">O Projeto</a>
+                    <a href="index.html#equipe">Equipe</a>
+                    <a href="index.html#contato">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/bftcamarao/" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BFT Camarão. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <!-- <script src="js/lobby.js"></script> --> <!-- Uncomment if lobby.js is created -->
+</body>
+</html>
